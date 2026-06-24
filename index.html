@@ -30,6 +30,55 @@
             display: flex;
             justify-content: center;
         }
+     .brand-logo-staggered {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            user-select: none;
+            margin-bottom: 2rem;
+        }
+
+        .brand-logo-staggered .word-limon {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--texto-dark);
+            margin-left: 20px;
+        }
+
+        .brand-logo-staggered .word-arbol {
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--texto-dark);
+            margin-left: 90px;
+            background: linear-gradient(180deg, transparent 60%, rgba(255, 243, 161, 0.6) 60%);
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .brand-logo-staggered .word-portfolio {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #a2b5cd;
+            text-transform: lowercase;
+            margin-left: 40px;
+            margin-top: 4px;
+        }
+        .video-card {
+            width: 85%;
+            max-width: 380px;
+            background-color: var(--borde-foto);
+            padding: 12px 12px 35px 12px;
+            box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--texto-dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+            position: relative;
+        }
 
           .notebook-container {
             position: relative;
@@ -166,12 +215,12 @@
 
         .tape-pink {
             background-color: var(--rosa-tape);
-            color: #61561c;
+            color: #f7f4d5;
         }
 
         .tape-green {
             background-color: var(--verde-tape);
-            color: #2b4661;
+            color: #839958;
             transform: translateX(-50%) rotate(2deg);
         }
 
@@ -183,7 +232,7 @@
         .deco-star {
             position: absolute;
             font-size: 1.5rem;
-            color: #bce3ff;
+            color: #0A3323;
             user-select: none;
             opacity: 0.6;
         }
@@ -195,8 +244,22 @@
             .video-card { width: 100%; max-width: 450px; transform: none !important; margin-bottom: 2.5rem; }
         }
     </style>
-  
-    <h1> ݁*ੈ Portafolio de Física y Simulación ✩‧₊˚</h1>
+</head>head>
+  <body>
+
+    <div class="notebook-container">
+
+    <div class="binder-spine"></div>
+
+        <div class="collage-canvas">
+            
+            <div class="notebook-row">
+                <div class="page-left" style="align-items: flex-start; justify-content: flex-start; padding-left: 3rem;">
+              
+                        <span class="word-portfolio">*ੈ Portafolio de Física y Simulación ✩‧₊˚</span>
+                        <span class="word-portfolio">Nadia Camila Zaragoza Alfonso</span>
+                    </div>
+
     
     <section>
       <h2>Caída libre</h2>
