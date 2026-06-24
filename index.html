@@ -4,19 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
-<style>
-  h1{text-align: center;}
-  h2{text-align: center;}
-  p{text-align: center;}
-</style>
-</head>
+  <style>
+    :root {
+            --bg-verde: #839958;
+            --hoja-crema: #f7f4d5;     
+            --borde-foto: #ffffff;      
+            --rosa-tape: rgba(211, 150, 140, 0.9); 
+            --verde-tape: rgba(10, 51, 35, 0.9);
+            --texto-dark: #839958;
+            --texto-muted: #f7f4d5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
 <body>
-  <div>
+  background-color: var(--bg-verde);
+            background-image: radial-gradient(rgba(255,255,255,0.5) 2px, transparent 0);
+            background-size: 30px 30px;
+            padding: 4rem 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+          .notebook-container {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            background-color: var(--hoja-crema);
+            border-radius: 12px;
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.12),
+                -6px 0px 0px #f0f0f0, 
+                6px 0px 0px #f0f0f0;
+            padding: 3rem 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+       .notebook-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(0, 0, 0, 0.05);
+            z-index: 1;
+        }
+
+        .binder-spine {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 24px;
+            background: repeating-linear-gradient(
+                to bottom,
+                #777 0px, #ddd 3px, #fff 6px, #aaa 9px, #666 12px,
+                transparent 12px, transparent 90px
+            );
+            z-index: 10;
+            filter: drop-shadow(4px 2px 5px rgba(0,0,0,0.15));
+        }
+
+        .collage-canvas {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .notebook-row {
+            display: flex;
+            width: 100%;
+            min-height: 300px;
+        }
+
+        .page-left, .page-right {
+            width: 50%;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .page-left { justify-content: flex-end; }
+        .page-right { justify-content: flex-start; }
+
+    .video-card {
+            width: 85%;
+            max-width: 380px;
+            background-color: var(--borde-foto);
+            padding: 12px 12px 35px 12px;
+            box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--texto-dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+            position: relative;
+        }
+  .video-card:hover {
+            transform: scale(1.04) rotate(0deg) !important; 
+            box-shadow: 5px 12px 25px rgba(0, 0, 0, 0.15);
+            z-index: 5;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background-color: #000;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .video-wrapper video, 
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border: none;
+        }
+
+        .card-meta {
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: var(--texto-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tape-label {
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2.5deg);
+            padding: 6px 24px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+            box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.05);
+            z-index: 3;
+            border-left: 3px dashed rgba(0, 0, 0, 0.06);
+            border-right: 3px dashed rgba(0, 0, 0, 0.06);
+        }
+
+        .tape-pink {
+            background-color: var(--rosa-tape);
+            color: #61561c;
+        }
+
+        .tape-green {
+            background-color: var(--verde-tape);
+            color: #2b4661;
+            transform: translateX(-50%) rotate(2deg);
+        }
+
+        .rot-izq-1 { transform: rotate(-2.5deg); }
+        .rot-izq-2 { transform: rotate(-4deg); }
+        .rot-der-1 { transform: rotate(3deg); }
+        .rot-der-2 { transform: rotate(1.5deg); }
+
+        .deco-star {
+            position: absolute;
+            font-size: 1.5rem;
+            color: #bce3ff;
+            user-select: none;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 850px) {
+            .notebook-container::before, .binder-spine { display: none; }
+            .notebook-row { flex-direction: column; min-height: auto; }
+            .page-left, .page-right { width: 100%; justify-content: center; padding: 1.5rem 1rem; }
+            .video-card { width: 100%; max-width: 450px; transform: none !important; margin-bottom: 2.5rem; }
+        }
+    </style>
+  
     <h1> ݁*ੈ Portafolio de Física y Simulación ✩‧₊˚</h1>
     
     <section>
