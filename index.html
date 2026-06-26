@@ -4,229 +4,264 @@
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Camilonche </title>
+
+    <!-- Importación de las nuevas fuentes desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Special+Elite&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 40px 0;
             min-height: 100vh;
-            background: linear-gradient(
-                to bottom,
-                #D9F5F0 0%,
-                #75E2E0 35%,
-                #2CACAD 50%,
-                #024D60 85%,
-                #1C4EA7 100%
-            );
-            background-attachment: fixed;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #ffffff;
+            background-color: #839958; /* Fondo verde */
+            font-family: 'Playfair Display', serif;
+            color: #333333;
             position: relative;
             overflow-x: hidden;
         }
 
-/* --- Título con estilo Art Nouveau --- */
-        h1 {
-            font-family: "jacquard", serif;
-font-weight: 400;
-            font-style: normal;
-            font-size: 4rem;
-            text-align: center;
-            padding: 60px 15px 10px 15px;
-            letter-spacing: 2px;
-            color: #fffdf0; /* Un blanco cálido/marfil */
-            text-shadow: 3px 3px 8px rgba(2, 77, 96, 0.7);
-            position: relative;
-            display: block;
-            margin-bottom: 40px;
+        /* --- CONTENEDOR CENTRAL BEIGE --- */
+        .lienzo-central {
+            background-color: #f7f4d5; /* Fondo beige */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            border: 2px solid #ecdca5;
         }
 
-        /* Línea ornamental curva debajo del título principal */
+        /* --- TÍTULO PRINCIPAL (JACQUARD 12) --- */
+        h1 {
+            font-family: "Jacquard 12", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 5.5rem; /* Tamaño ajustado para esta tipografía */
+            text-align: center;
+            padding: 10px 15px 10px 15px;
+            letter-spacing: 1px;
+            color: #4a5c2d;
+            margin-bottom: 20px;
+        }
+
+        /* Línea ornamental curva debajo del título */
         h1::after {
             content: "";
             display: block;
             width: 250px;
             height: 15px;
-            margin: 15px auto 0 auto;
-            background: radial-gradient(ellipse at center, transparent 60%, #fffdf0 62%, #fffdf0 65%, transparent 67%);
-            border-bottom: 2px solid #fffdf0;
-            border-radius: 50%; /* Crea una curva orgánica suave */
-            opacity: 0.7;
+            margin: 5px auto 0 auto;
+            background: radial-gradient(ellipse at center, transparent 60%, #4a5c2d 62%, #4a5c2d 65%, transparent 67%);
+            border-bottom: 2px solid #4a5c2d;
+            border-radius: 50%;
+            opacity: 0.5;
         }
 
+        /* --- SUBTÍTULOS (ESTILO MÁQUINA DE ESCRIBIR) --- */
         h2 {
-            font-family: "Amarante", serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: "Special Elite", system-ui;
+            font-weight: 400;
+            font-style: normal;
             margin-bottom: 20px;
-            font-size: 2.2rem;
-            color: #fffdf0;
+            font-size: 1.6rem;
+            color: #554326; /* Color tinta antigua */
+            letter-spacing: -0.5px;
         }
 
         section {
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             text-align: center;
-            position: relative;
         }
 
-        /* --- MARCOS DE PINTURA CLÁSICA / ART NOUVEAU --- */
+        /* --- MARCOS DE PINTURA CLÁSICA --- */
         .marco-pintura {
             display: inline-block;
-            padding: 24px; /* El grosor del marco de madera */
-            
-            /* Un degradado que simula madera dorada u oro viejo con relieve */
+            padding: 20px; 
             background: linear-gradient(135deg, #a37a3e 0%, #e6c280 25%, #b38b4d 50%, #fceebb 75%, #8c622b 100%);
-            
-            /* Bordes internos y externos para simular las molduras talladas */
             border: 4px solid #61461f;
             outline: 2px solid #fffdf0;
-            outline-offset: -14px; 
-            border-radius: 12px; /* Esquinas ligeramente suavizadas, típicas del estilo */
-            
-            /* Sombra profunda para dar peso visual, como un cuadro real colgado */
-            box-shadow: 
-                0 15px 35px rgba(0, 0, 0, 0.6),
-                inset 0 0 15px rgba(0, 0, 0, 0.5);
-                
+            outline-offset: -12px; 
+            border-radius: 12px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
             position: relative;
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+            max-width: 100%;
         }
 
-        /* Ajuste del lienzo (el video) dentro del marco */
         .marco-pintura iframe {
             display: block;
-            border: 6px solid #111111; /* El passepartout o borde negro interno de la pintura */
+            border: 6px solid #111111; 
             box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
             border-radius: 4px;
+            max-width: 100%;
         }
 
-        /* Esquinas ornamentales añadidas con CSS (Simulación de tallado floral) */
         .marco-pintura::before {
             content: "✿";
             position: absolute;
-            top: 5px;
-            left: 8px;
-            font-size: 18px;
+            top: 4px;
+            left: 7px;
+            font-size: 16px;
             color: #4a3311;
             text-shadow: 1px 1px 0px #fffdf0;
-            font-family: serif;
         }
 
-        /* Efecto galería al pasar el mouse (se acerca sutilmente) */
         .marco-pintura:hover {
-            transform: scale(1.03) translateY(-5px);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+            transform: scale(1.03) translateY(-4px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.5);
             z-index: 10;
         }
     </style>
 </head>
 <body>
 
- <div class="container-fluid">
-    <h1>Portafolio de física y simulación</h1>
-    
-    <section>
-      <h2>Caída Libre</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/x16ZFfKJPSA?si=x_1eO22IhYzx4pGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
-    
-    <section>
-      <h2>Plano Inclinado</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/5NDbxvJ1808?si=xpXd0_A1mxK5S8LN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+  <div class="container">
+    <div class="lienzo-central">
+        
+        <h1>Portafolio de física y simulación</h1>
+        
+        <!-- Cuadrícula en dos columnas -->
+        <div class="row">
+            
+            <div class="col-md-6">
+                <section>
+                    <h2>Caída Libre</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/x16ZFfKJPSA?si=x_1eO22IhYzx4pGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="col-md-6">
+                <section>
+                    <h2>Plano Inclinado</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5NDbxvJ1808?si=xpXd0_A1mxK5S8LN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Boliche</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/44CojIrvBZw?si=9f4I2gXKlR4D80n5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Práctica Boliche</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/44CojIrvBZw?si=9f4I2gXKlR4D80n5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Constrains</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dTGVXcpHspM?si=WSyw-ge1UCx7tExb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Constrains</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dTGVXcpHspM?si=WSyw-ge1UCx7tExb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Partículas</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BdpdB7mdUng?si=SKQHMoJjOBM8nE55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Partículas</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BdpdB7mdUng?si=SKQHMoJjOBM8nE55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Fracture</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fIbwrLtk3b8?si=d0fUHavxEmKtpTj5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Fracture</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fIbwrLtk3b8?si=d0fUHavxEmKtpTj5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Tela Cloth Bandera</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QSuLkLTQm0Q?si=Yz48mgZtYjz3TgNS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Práctica Tela Cloth Bandera</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QSuLkLTQm0Q?si=Yz48mgZtYjz3TgNS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Revelación Auto</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PBe8NbztwIA?si=lbjMjoAnu_K7AUsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Revelación Auto</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PBe8NbztwIA?si=lbjMjoAnu_K7AUsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Partículas con Turbulencia</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WECwBUrp6TU?si=9DNSYUBHUznKQ1Hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Fuego</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rmG8vjsAbgM?si=83Vaa9ipvS_6BzFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Partículas con Turbulencia</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/WECwBUrp6TU?si=9DNSYUBHUznKQ1Hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
-    
-    <section>
-      <h2>Práctica Fuego</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rmG8vjsAbgM?si=83Vaa9ipvS_6BzFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Fluidos</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Q8LN-UYJrk?si=Td3P2HWhFWm30nPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Práctica Fluidos</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Q8LN-UYJrk?si=Td3P2HWhFWm30nPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Lata con Fluidos</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8og6GYcKjwk?si=r1dhBUzSvsBd2J4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Lata con Fluidos</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8og6GYcKjwk?si=r1dhBUzSvsBd2J4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Columpio</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FyysTeE8Ei0?si=rRB92FNT6XddOqL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Práctica Columpio</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FyysTeE8Ei0?si=rRB92FNT6XddOqL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+            <div class="col-md-6">
+                <section>
+                    <h2>Práctica Demolición</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CXdutA0RDlY?si=nZgVFYTWGtyA-Gu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="col-md-12">
+                <section>
+                    <h2>Práctica Soft Body</h2>
+                    <div class="marco-pintura">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tYzKc-NUg_Y?si=MpYFHzebmIXD3ASq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </section>
+            </div>
 
-    <section>
-      <h2>Práctica Demolición</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/CXdutA0RDlY?si=nZgVFYTWGtyA-Gu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
-    
-    <section>
-      <h2>Práctica Soft Body</h2>
-      <div class="marco-pintura">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tYzKc-NUg_Y?si=MpYFHzebmIXD3ASq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-    </section>
+        </div> <!-- Fin row -->
+    </div> <!-- Fin lienzo-central -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </div>
