@@ -26,49 +26,96 @@
 
 /* --- Título con estilo Art Nouveau --- */
         h1 {
-            font-family: "Amarante", serif;
-            font-weight: 400;
+            font-family: "jacquard", serif;
+font-weight: 400;
             font-style: normal;
-            font-size: 3.8rem;
+            font-size: 4rem;
             text-align: center;
-            padding: 50px 15px 20px 15px;
-            letter-spacing: 1px;
-            text-shadow: 3px 3px 6px rgba(2, 77, 96, 0.6);
+            padding: 60px 15px 10px 15px;
+            letter-spacing: 2px;
+            color: #fffdf0; /* Un blanco cálido/marfil */
+            text-shadow: 3px 3px 8px rgba(2, 77, 96, 0.7);
+            position: relative;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        /* Línea ornamental curva debajo del título principal */
+        h1::after {
+            content: "";
+            display: block;
+            width: 250px;
+            height: 15px;
+            margin: 15px auto 0 auto;
+            background: radial-gradient(ellipse at center, transparent 60%, #fffdf0 62%, #fffdf0 65%, transparent 67%);
+            border-bottom: 2px solid #fffdf0;
+            border-radius: 50%; /* Crea una curva orgánica suave */
+            opacity: 0.7;
         }
 
         h2 {
+            font-family: "Amarante", serif;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
+            font-size: 2.2rem;
+            color: #fffdf0;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 80px;
             text-align: center;
-        }
-
-        /* --- Estilos de las Postales --- */
-        .postal {
-            background-color: #f7f4d5;
-            padding: 15px 15px 45px 15px; /* Simula el borde ancho inferior de una postal */
-            display: inline-block;
-            border-radius: 4px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
         }
 
-        .postal:hover {
-            transform: scale(1.04) rotate(0deg) !important;
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
-            z-index: 5;
+        /* --- MARCOS DE PINTURA CLÁSICA / ART NOUVEAU --- */
+        .marco-pintura {
+            display: inline-block;
+            padding: 24px; /* El grosor del marco de madera */
+            
+            /* Un degradado que simula madera dorada u oro viejo con relieve */
+            background: linear-gradient(135deg, #a37a3e 0%, #e6c280 25%, #b38b4d 50%, #fceebb 75%, #8c622b 100%);
+            
+            /* Bordes internos y externos para simular las molduras talladas */
+            border: 4px solid #61461f;
+            outline: 2px solid #fffdf0;
+            outline-offset: -14px; 
+            border-radius: 12px; /* Esquinas ligeramente suavizadas, típicas del estilo */
+            
+            /* Sombra profunda para dar peso visual, como un cuadro real colgado */
+            box-shadow: 
+                0 15px 35px rgba(0, 0, 0, 0.6),
+                inset 0 0 15px rgba(0, 0, 0, 0.5);
+                
+            position: relative;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
         }
 
-        /* Rotaciones ligeras para simular desorden natural */
-        .rotar-der { transform: rotate(2deg); }
-        .rotar-izq { transform: rotate(-2deg); }
-        .rotar-der-mas { transform: rotate(3.5deg); }
-        .rotar-izq-mas { transform: rotate(-3.5deg); }
+        /* Ajuste del lienzo (el video) dentro del marco */
+        .marco-pintura iframe {
+            display: block;
+            border: 6px solid #111111; /* El passepartout o borde negro interno de la pintura */
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            border-radius: 4px;
+        }
 
+        /* Esquinas ornamentales añadidas con CSS (Simulación de tallado floral) */
+        .marco-pintura::before {
+            content: "✿";
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            font-size: 18px;
+            color: #4a3311;
+            text-shadow: 1px 1px 0px #fffdf0;
+            font-family: serif;
+        }
+
+        /* Efecto galería al pasar el mouse (se acerca sutilmente) */
+        .marco-pintura:hover {
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
