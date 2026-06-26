@@ -1,3 +1,9 @@
+
+background{
+  color: #f0fafc;
+  linear-gradient:(90deg, rgba(240, 250, 252, 1) 0%, rgba(227, 244, 255, 1) 50%, rgba(235, 252, 252, 1) 100%);
+} 
+
 h1{
     color: #5e7892; 
 .jacquard-12-regular {
