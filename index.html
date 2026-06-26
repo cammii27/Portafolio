@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página submarina</title>
+    <title>Portafolio | Camilonche </title>
     <style>
         body {
             margin: 0;
@@ -18,85 +18,185 @@
                 #1C4EA7 100%
             );
             background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        h1, h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        /* --- Estilos de las Postales --- */
+        .postal {
+            background-color: #ffffff;
+            padding: 15px 15px 45px 15px; /* Simula el borde ancho inferior de una postal */
+            display: inline-block;
+            border-radius: 4px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .postal:hover {
+            transform: scale(1.04) rotate(0deg) !important;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+            z-index: 5;
+        }
+
+        /* Rotaciones ligeras para simular desorden natural */
+        .rotar-der { transform: rotate(2deg); }
+        .rotar-izq { transform: rotate(-2deg); }
+        .rotar-der-mas { transform: rotate(3.5deg); }
+        .rotar-izq-mas { transform: rotate(-3.5deg); }
+
+        /* --- Elementos Decorativos del Mar --- */
+        .elemento-marino {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.5;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .concha { font-size: 3rem; transform: rotate(15deg); }
+        .concha-espiral { font-size: 3.5rem; transform: rotate(-25deg); }
+        .estrella { font-size: 2.5rem; transform: rotate(45deg); }
     </style>
 </head>
 <body>
+
+  <div class="elemento-marino estrella" style="top: 8%; left: 8%;">⭐</div>
+  <div class="elemento-marino concha" style="top: 15%; right: 10%;">🐚</div>
+  <div class="elemento-marino concha-espiral" style="top: 28%; left: 5%;">🐚</div>
+  <div class="elemento-marino estrella" style="top: 42%; right: 7%;">⭐</div>
+  <div class="elemento-marino concha" style="top: 58%; left: 12%;">🐚</div>
+  <div class="elemento-marino estrella" style="top: 72%; right: 12%;">⭐</div>
+  <div class="elemento-marino concha-espiral" style="top: 88%; left: 8%;">🐚</div>
+
   <div class="container-fluid">
     <h1>Portafolio de física y simulación</h1>
+    
     <section>
       <h2>Caída Libre</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/x16ZFfKJPSA?si=x_1eO22IhYzx4pGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/x16ZFfKJPSA?si=x_1eO22IhYzx4pGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
     
     <section>
       <h2>Plano Inclinado</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/5NDbxvJ1808?si=xpXd0_A1mxK5S8LN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5NDbxvJ1808?si=xpXd0_A1mxK5S8LN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Práctica Boliche</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/44CojIrvBZw?si=9f4I2gXKlR4D80n5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/44CojIrvBZw?si=9f4I2gXKlR4D80n5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Constrains</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dTGVXcpHspM?si=WSyw-ge1UCx7tExb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dTGVXcpHspM?si=WSyw-ge1UCx7tExb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Partículas</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/BdpdB7mdUng?si=SKQHMoJjOBM8nE55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BdpdB7mdUng?si=SKQHMoJjOBM8nE55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Fracture</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/fIbwrLtk3b8?si=d0fUHavxEmKtpTj5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fIbwrLtk3b8?si=d0fUHavxEmKtpTj5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Práctica Tela Cloth Bandera</h2>
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/QSuLkLTQm0Q?si=Yz48mgZtYjz3TgNS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QSuLkLTQm0Q?si=Yz48mgZtYjz3TgNS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
 
     <section>
-      <H2>Revelación Auto</H2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/PBe8NbztwIA?si=lbjMjoAnu_K7AUsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h2>Revelación Auto</h2>
+      <div class="postal rotar-izq-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/PBe8NbztwIA?si=lbjMjoAnu_K7AUsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Partículas con Turbulencia</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/WECwBUrp6TU?si=9DNSYUBHUznKQ1Hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/WECwBUrp6TU?si=9DNSYUBHUznKQ1Hz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
     
     <section>
       <h2>Práctica Fuego</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/rmG8vjsAbgM?si=83Vaa9ipvS_6BzFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rmG8vjsAbgM?si=83Vaa9ipvS_6BzFX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Práctica Fluidos</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/2Q8LN-UYJrk?si=Td3P2HWhFWm30nPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2Q8LN-UYJrk?si=Td3P2HWhFWm30nPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Lata con Fluidos</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/8og6GYcKjwk?si=r1dhBUzSvsBd2J4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8og6GYcKjwk?si=r1dhBUzSvsBd2J4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Práctica Columpio</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/FyysTeE8Ei0?si=rRB92FNT6XddOqL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FyysTeE8Ei0?si=rRB92FNT6XddOqL9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section>
       <h2>Práctica Demolición</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CXdutA0RDlY?si=nZgVFYTWGtyA-Gu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-izq">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CXdutA0RDlY?si=nZgVFYTWGtyA-Gu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
     
     <section>
       <h2>Práctica Soft Body</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/tYzKc-NUg_Y?si=MpYFHzebmIXD3ASq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="postal rotar-der-mas">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tYzKc-NUg_Y?si=MpYFHzebmIXD3ASq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </div>
 </body>
